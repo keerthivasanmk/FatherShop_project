@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form input {
+  background-color: #d9d9d94d;
+  border-radius: 5px;
+  padding: 12px;
+  width: 100%;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 5px;
+}
