@@ -9,14 +9,11 @@ import { useSelector } from "react-redux";
 import globeIcon from "/public/globe-icon.png";
 import fathershopLogo from "/public/fathershop-logo.png";
 import flag1 from "/public/flag1.png";
-import flag2 from "/public/flag2.png";
 import eyeOn from "/public/eye-on.svg";
 import eyeOff from "/public/eye-off.svg";
 
 // Components
 import RightLayout from "/components/RightLayout.jsx";
-
-// const flags = ["/flag1.png", "/flag2.png"];
 
 export default function SignUp() {
   const [formData, setFormData] = useState({
@@ -127,28 +124,21 @@ export default function SignUp() {
                   />
                   {errors.name && <div className="error">{errors.name}</div>}
                 </div>
-                <div className="relative">
-                  {/* <select
-                    name="phoneNumber"
-                    className="absolute left-0 bg-transparent"
-                  >
-                    {flags?.map((flag, index) => (
-                      <option
-                        key={index}
-                        value={index}
-                        style={{ backgroundImage: `url(${flag})` }}
-                      ></option>
-                    ))}
-                  </select> */}
-                  <input
-                    type="text"
-                    name="phoneNumber"
-                    value={formData.phoneNumber}
-                    onChange={handleChange}
-                    placeholder="Phone Number"
-                  />
+                <div>
+                  <div className="flex gap-3 items-center phone-number-item">
+                    <span className="bg-transparent">
+                      <Image src={flag1} alt={"flag1"} width={20} />
+                    </span>
+                    <input
+                      type="text"
+                      name="phoneNumber"
+                      value={formData.phoneNumber}
+                      onChange={handleChange}
+                      placeholder="Phone Number"
+                    />
+                  </div>
                   {errors.phoneNumber && (
-                    <div className="error">{errors.phoneNumber}</div>
+                    <div className="error w-full">{errors.phoneNumber}</div>
                   )}
                 </div>
                 <div>

@@ -9,6 +9,16 @@
   width: 100%;
 }
 
+.phone-number-item {
+  border-radius: 5px;
+  padding-left: 12px;
+  background-color: #d9d9d94d;
+  input {
+    background-color: transparent;
+    padding: 12px 12px 12px 0;
+  }
+}
+
 .error {
   color: red;
   font-weight: bold;
